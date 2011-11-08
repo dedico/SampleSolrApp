@@ -1,0 +1,8 @@
+*/bin
+*/obj
+solr-*/solr/data
+solr-*/logs/*
+solr-1.4.0/solr/data/*
+*.suo
+SampleSolrApp/Logs/*
+SampleSolrApp/db/*

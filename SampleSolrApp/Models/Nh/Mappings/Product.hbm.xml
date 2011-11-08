@@ -1,0 +1,29 @@
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" default-access="property" auto-import="true">
+  <class xmlns="urn:nhibernate-mapping-2.2" mutable="true" name="SampleSolrApp.Models.Nh.Product, SampleSolrApp" table="`Products`">
+    <id name="Id" type="System.Int32">
+      <column name="Id" />
+      <generator class="identity" />
+    </id>
+
+    <property name="SKU"/>
+    <property name="Name"/>
+    <property name="Manufacturer"/>
+    <property name="Description"/>
+    <property name="Price"/>
+    <property name="Popularity"/>
+    <property name="InStock"/>
+    <property name="Timestamp"/>
+    <property name="Weight"/>
+
+    <set name="Categories">
+      <key column="ProductId" foreign-key="fk_Category_Product"/>
+      <element column="Name" type="String"/>
+    </set>
+
+    <set name="Features">
+      <key column="ProductId" foreign-key="fk_Features_Product"/>
+      <element column="Name" type="String"/>
+    </set>
+
+  </class>
+</hibernate-mapping>
